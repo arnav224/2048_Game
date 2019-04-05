@@ -1,0 +1,91 @@
+﻿<Window x:Name="Game6X6Window1" x:Class="_2048._02.Game6X6Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_2048._02"
+        mc:Ignorable="d"
+        Title="2048 6x6" Height="545" Width="500">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFFFFEFB" Offset="1"/>
+            <GradientStop Color="#FFFFFFEE"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid x:Name="PlayGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="7*"/>
+        </Grid.RowDefinitions>
+        <!--<Label x:Name="NumberLable00" Content="2" Grid.Row="0" Grid.Column="0" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone" Background="#FFF2E8AE"/>
+        <Label x:Name="NumberLable01" Content="4" Grid.Row="0" Grid.Column="1" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone" Background="#FFF8CA85"/>
+        <Label x:Name="NumberLable02" Content="8" Grid.Row="0" Grid.Column="2" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone" Background="#FFFFB74A"/>
+        <Label x:Name="NumberLable03" Content="16" Grid.Row="0" Grid.Column="3" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone" Background="#FFFF8327"/>
+        <Label x:Name="NumberLable10" Content="32" Grid.Row="1" Grid.Column="0" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone" Background="#FFF84413"/>
+        <Label x:Name="NumberLable11" Content="64" Grid.Row="1" Grid.Column="1" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone" Background="#FFFF1600"/>
+        <Label x:Name="NumberLable12" Content="128" Grid.Row="1" Grid.Column="2" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone" Background="#FFFFD23C"/>
+        <Label x:Name="NumberLable13" Content="256" Grid.Row="1" Grid.Column="3" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone" Background="#FFE4AA10"/>
+        <Label x:Name="NumberLable20" Content="512" Grid.Row="2" Grid.Column="0" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone" Background="#FFF486B0"/>
+        <Label x:Name="NumberLable21" Content="1024" Grid.Row="2" Grid.Column="1" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone" Background="#FFEB5ECB"/>
+        <Label x:Name="NumberLable22" Content="2048" Grid.Row="2" Grid.Column="2" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone" Background="Transparent"#FFB412B2/>-->
+
+        <Label x:Name="NumberLable00" Content="" Grid.Row="0" Grid.Column="0" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone" />
+        <Label x:Name="NumberLable01" Content="" Grid.Row="0" Grid.Column="1" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone"/>
+        <Label x:Name="NumberLable02" Content="" Grid.Row="0" Grid.Column="2" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone"/>
+        <Label x:Name="NumberLable03" Content="" Grid.Row="0" Grid.Column="3" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone"/>
+        <Label x:Name="NumberLable04" Content="" Grid.Row="0" Grid.Column="4" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone"/>
+        <Label x:Name="NumberLable05" Content="" Grid.Row="0" Grid.Column="5" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone"/>
+
+        <Label x:Name="NumberLable10" Content="" Grid.Row="1" Grid.Column="0" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone" />
+        <Label x:Name="NumberLable11" Content="" Grid.Row="1" Grid.Column="1" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone" />
+        <Label x:Name="NumberLable12" Content="" Grid.Row="1" Grid.Column="2" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone" />
+        <Label x:Name="NumberLable13" Content="" Grid.Row="1" Grid.Column="3" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone" />
+        <Label x:Name="NumberLable14" Content="" Grid.Row="1" Grid.Column="4" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone" />
+        <Label x:Name="NumberLable15" Content="" Grid.Row="1" Grid.Column="5" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone" />
+
+        <Label x:Name="NumberLable20" Content="" Grid.Row="2" Grid.Column="0" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone"  />
+        <Label x:Name="NumberLable21" Content="" Grid.Row="2" Grid.Column="1" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone"  />
+        <Label x:Name="NumberLable22" Content="" Grid.Row="2" Grid.Column="2" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone"  />
+        <Label x:Name="NumberLable23" Content="" Grid.Row="2" Grid.Column="3" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone"  />
+        <Label x:Name="NumberLable24" Content="" Grid.Row="2" Grid.Column="4" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone"  />
+        <Label x:Name="NumberLable25" Content="" Grid.Row="2" Grid.Column="5" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone"  />
+
+        <Label x:Name="NumberLable30" Content="" Grid.Row="3" Grid.Column="0" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone"  />
+        <Label x:Name="NumberLable31" Content="" Grid.Row="3" Grid.Column="1" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone"  />
+        <Label x:Name="NumberLable32" Content="" Grid.Row="3" Grid.Column="2" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone"  />
+        <Label x:Name="NumberLable33" Content="" Grid.Row="3" Grid.Column="3" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone"  />
+        <Label x:Name="NumberLable34" Content="" Grid.Row="3" Grid.Column="4" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone"  />
+        <Label x:Name="NumberLable35" Content="" Grid.Row="3" Grid.Column="5" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone"  />
+
+        <Label x:Name="NumberLable40" Content="" Grid.Row="4" Grid.Column="0" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone"  />
+        <Label x:Name="NumberLable41" Content="" Grid.Row="4" Grid.Column="1" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone"  />
+        <Label x:Name="NumberLable42" Content="" Grid.Row="4" Grid.Column="2" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone"  />
+        <Label x:Name="NumberLable43" Content="" Grid.Row="4" Grid.Column="3" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone"  />
+        <Label x:Name="NumberLable44" Content="" Grid.Row="4" Grid.Column="4" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone"  />
+        <Label x:Name="NumberLable45" Content="" Grid.Row="4" Grid.Column="5" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone"  />
+
+        <Label x:Name="NumberLable50" Content="" Grid.Row="5" Grid.Column="0" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone" />
+        <Label x:Name="NumberLable51" Content="" Grid.Row="5" Grid.Column="1" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone" />
+        <Label x:Name="NumberLable52" Content="" Grid.Row="5" Grid.Column="2" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone" />
+        <Label x:Name="NumberLable53" Content="" Grid.Row="5" Grid.Column="3" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone" />
+        <Label x:Name="NumberLable54" Content="" Grid.Row="5" Grid.Column="4" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone" />
+        <Label x:Name="NumberLable55" Content="" Grid.Row="5" Grid.Column="5" Margin="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontFamily="You're Gone" />
+
+        <Button x:Name="NewGameButton" Grid.ColumnSpan="2" Content="משחק חדש" HorizontalAlignment="Stretch" Margin="20,7" Grid.Row="6" VerticalAlignment="Stretch" />
+        <Label x:Name="ScoreLable" Grid.ColumnSpan="4" Content="ניקוד: 0   השיא: 0" Grid.Column="2" HorizontalAlignment="Stretch"  Margin="20,3" Grid.Row="6" VerticalAlignment="Stretch" HorizontalContentAlignment="Right" FontWeight="DemiBold" FontSize="14" Background="Transparent" />
+
+    </Grid>
+</Window>

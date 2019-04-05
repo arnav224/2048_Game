@@ -1,0 +1,25 @@
+﻿<Window x:Name="MainWindow1" x:Class="_2048._02.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_2048._02"
+        mc:Ignorable="d"
+        Title="2048" Height="250" Width="450" Background="#FFF2E8AE">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+        <Grid  Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="NewGame4X4Button" Content="4X4" HorizontalAlignment="Stretch"  Margin="35,20,17,20" VerticalAlignment="Stretch" FontFamily="You're Gone" FontSize="28" Background="#FFF8CA85" BorderThickness="0" />
+            <Button x:Name="NewGame6X6Button" Content="6X6" Grid.Column="1" HorizontalAlignment="Stretch"  Margin="17,20,35,20" VerticalAlignment="Stretch" FontFamily="You're Gone" FontSize="28" Background="#FFF8CA85" BorderThickness="0" />
+        </Grid>
+        <Label Content="2048" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="You're Gone" FontSize="35"/>
+
+    </Grid>
+</Window>
